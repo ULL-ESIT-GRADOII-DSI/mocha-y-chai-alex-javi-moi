@@ -18,6 +18,10 @@
     Medida.call(this, valor, tipo);
   }
   
+  Conversor.prototype = new Medida();
+  Conversor.prototype.constructor = Conversor;
+  
+  
   function Celsius(valor){
     Conversor.call(this, valor, "c");
 		this.toFarenheit = function (){
@@ -27,6 +31,11 @@
       return (parseInt(this.getValor()) + 273.15);
     };
   }
+  
+  Celsius.prototype = new Conversor();
+	Celsius.prototype.constructor = Celsius;
+  
+  
   
   function Farenheit(valor){
     Conversor.call(this, valor, "f");
@@ -39,6 +48,10 @@
     };
   }
   
+  Farenheit.prototype = new Conversor();
+	Farenheit.prototype.constructor = Farenheit;
+  
+  
   function Kelvin(valor){
     Conversor.call(this, valor, "k");
     this.toFarenheit = function () {
@@ -49,6 +62,11 @@
 		  return (this.getValor() - 237.15);
 		};
   }
+
+  
+  
+  Kelvin.prototype = new Conversor();
+	Kelvin.prototype.constructor = Kelvin;
   
   function Metro(valor){
     Conversor.call(this, valor, "m");
@@ -57,12 +75,23 @@
     };
   }
   
+  
+  Metro.prototype = new Conversor();
+	Metro.prototype.constructor = Metro;
+  
+  
+  
   function Pulgada(valor){
     Conversor.call(this, valor, "inch");
     this.toMetro = function(){
       return (parseInt(this.getValor()) * 0.0254);
     };
   }
+  
+  Pulgada.prototype = new Conversor();
+	Pulgada.prototype.constructor = Pulgada;
+	
+	
   
   function Euro(valor){
     Conversor.call(this, valor, "€");
@@ -71,6 +100,10 @@
     };
   }
   
+  Euro.prototype = new Conversor();
+	Euro.prototype.constructor = Euro;
+	
+  
   function Dollar(valor){
     Conversor.call(this, valor, "$");
     this.toEuro = function(){
@@ -78,21 +111,6 @@
     };
   }
 
-  Conversor.prototype = new Medida();
-  Conversor.prototype.constructor = Conversor;
-
-  Celsius.prototype = new Conversor();
-	Celsius.prototype.constructor = Celsius;
-	Farenheit.prototype = new Conversor();
-	Farenheit.prototype.constructor = Farenheit;
-	Kelvin.prototype = new Conversor();
-	Kelvin.prototype.constructor = Kelvin;
-	Metro.prototype = new Conversor();
-	Metro.prototype.constructor = Metro;
-	Pulgada.prototype = new Conversor();
-	Pulgada.prototype.constructor = Pulgada;
-	Euro.prototype = new Conversor();
-	Euro.prototype.constructor = Euro;
 	Dollar.prototype = new Conversor();
 	Dollar.prototype.constructor = Dollar;
 	
@@ -173,6 +191,6 @@
       }
     }
     else
-      elemento.innerHTML = "";
+      elemento.innerHTML = "ERROR";
   };
 })(this);
