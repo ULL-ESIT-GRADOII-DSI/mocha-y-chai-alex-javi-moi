@@ -7,9 +7,7 @@
     
     Distancia.prototype = Object.create(Medida.prototype);
     Distancia.prototype.constructor= Distancia;
-    
-    
-
+  
     
     Kilometros.prototype = Object.create(Distancia.prototype);
     Kilometros.prototype.constructor = Kilometros;
