@@ -1,6 +1,7 @@
 (function(exports) {
     "use strict";
 
+
     function Temperatura(valor,tipo) {
       Medida.call(this, valor, tipo);
     }
@@ -8,8 +9,11 @@
     Temperatura.prototype.constructor = Temperatura;
   
   
+  
+  
     Fahrenheit.prototype = Object.create(Temperatura.prototype);
     Fahrenheit.prototype.constructor = Fahrenheit;
+   
   
     function Fahrenheit(valor) {
       Temperatura.call(this, valor, "f");
@@ -25,14 +29,12 @@
       var converted = ((this.getValor() - 32) / (9/5)) + 273.15;
       return converted;
     }
+  
 
 
-
-
-
-    
     Celsius.prototype = Object.create(Temperatura.prototype);
     Celsius.prototype.constructor = Celsius;
+   
     
     function Celsius(valor) {
       Temperatura.call(this, valor, "c");
@@ -51,12 +53,11 @@
    
    
    
-   
-   
     
     
     Kelvin.prototype = Object.create(Temperatura.prototype);
     Kelvin.prototype.constructor = Kelvin;
+    
     
     function Kelvin(valor) {
       Temperatura.call(this, valor, "k");
@@ -72,21 +73,16 @@
       var result = ((this.getValor() - 273.15) * 9/5) + 32;
       return result;
     }
-
-
-
-
-
-
+  
     Medida.measures = {
-      "f": Fahrenheit,
-      "c": Celsius,
-      "k": Kelvin
+      "f" : Fahrenheit,
+      "c" : Celsius,
+      "k" : Kelvin
     };
 
     exports.Temperatura = Temperatura;
     exports.Celsius = Celsius;
     exports.Fahrenheit = Fahrenheit;
     exports.Kelvin = Kelvin;
-
+    
 })(this);

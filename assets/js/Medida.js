@@ -1,6 +1,12 @@
 (function (exports) {
     "use strict";
 
+    var regexp = XRegExp('(?<numero> [+-]?\\d+(\\.\\d+)?([e][+-]?\\d+)?[ ]*) # valor \n' + 
+							               '(?<tipo> [fck])          # tipo de entrada   \n' + 
+							               '(?<to> \\s*(?:to)?\\s*)  # to opcional \n' +
+							               '(?<destino> [fck])       # tipo destino', 'x');
+
+
     function Medida(valor, tipo) {      
 
           if (!tipo) {  
@@ -22,12 +28,7 @@
 
 
     Medida.match = function(entrada)
-    {   
-        var regexp = XRegExp('(?<numero> [+-]?\\d+(\\.\\d+)?([e][+-]?\\d+)?[ ]*) # valor \n' + 
-							               '(?<tipo> [fck])          # tipo de entrada   \n' + 
-							               '(?<to> \\s*(?:to)?\\s*)  # to opcional \n' +
-							               '(?<destino> [fck])       # tipo destino', 'x');
-       
+    { 
         return XRegExp.exec(entrada, regexp);
     }
 
