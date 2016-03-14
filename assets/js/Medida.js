@@ -1,8 +1,8 @@
 /* Expresion regular extendida */
 var regexp = XRegExp('(?<numero> [+-]?\\d+(\\.\\d+)?([e][+-]?\\d+)?[ ]*) # valor \n' + 
-							       '(?<tipo> [fck])          # tipo de entrada   \n' + 
+							       '(?<tipo> [fck$€])          # tipo de entrada   \n' + 
 							       '(?<to> \\s*(?:to)?\\s*)  # to opcional \n' +
-							       '(?<destino> [fck])       # tipo destino', 'x');
+							       '(?<destino> [fck$€])       # tipo destino', 'x');
 
 (function (exports) {
     "use strict";
