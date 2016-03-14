@@ -43,6 +43,7 @@
       "mi" : Millas
     };
 
+    exports.Distancia = Distancia;
     exports.Kilometros = Kilometros;
     exports.Millas = Millas;
     
