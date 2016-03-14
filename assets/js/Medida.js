@@ -2,10 +2,7 @@
     "use strict";
 
     function Medida(valor, tipo) {      
-        /* tipo es opcional. Debería admitir  new Medida("45.2 Km") */ 
-        /* ademas de new Medida(45.2, "Km") */
-   
-        
+
           if (!tipo) {  
             var match = XRegExp.exec(valor, regexp);  
             console.log(match);
@@ -20,7 +17,6 @@
         //return _valor,_tipo;
         this.getValor = function() { return _valor; };
         this.getTipo = function() { return _tipo; };
-        
       
     };
 
