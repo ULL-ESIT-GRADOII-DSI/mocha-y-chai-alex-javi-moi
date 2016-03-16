@@ -8,11 +8,18 @@
   </head>
   <body>
     <div id="mocha"></div>
-    <script src="mocha.js"></script>
-    <script>mocha.setup('bdd');</script>
-    <script src="tests.js"></script>
-    <script>
-      mocha.run();
-    </script>
+    
+      <script src="mocha.js"></script>
+      <script src="chai.js"></script>
+      
+      <script src="../xregexp-all.js"></script>
+      <script src="../assets/js/Medida.js"></script>
+      <script src="../assets/js/Temperatura.js"></script>
+      <!--<script src="../assets/js/Distancia.js"></script>
+      <script src="../assets/js/Moneda.js"></script>-->
+      
+      <script>mocha.setup('bdd');</script>
+      <script src="tests.js"></script>
+      <script> mocha.run(); </script>
   </body>
 </html>
