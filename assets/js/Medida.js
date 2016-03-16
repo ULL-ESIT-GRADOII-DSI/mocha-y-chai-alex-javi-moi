@@ -3,7 +3,8 @@
     
     /* Expresion regular extendida */
     var regexp = XRegExp('(?<numero> [-+]?[0-9]+(\.[0-9]+)?(?:e[+-]?[0-9]+)?) #valor \n' +
-							           '(?<tipo> [fFcCkKmMpPdDeE])          # tipo de entrada   \n' + 
+                         '(?<espacio> \\s*) \n ' +
+							           '(?<tipo> \\s*[fFcCkKmMpPdDeE])          # tipo de entrada   \n' + 
 							           '(?<to> \\s*(?:to)?\\s*)  # to opcional \n' +
 							           '(?<destino> [fFcCkKmMpPdDeE])       # tipo destino', 'x');
     
