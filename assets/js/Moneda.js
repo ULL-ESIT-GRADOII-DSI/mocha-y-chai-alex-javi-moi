@@ -1,57 +1,44 @@
-(function(exports) {
-    "use strict";
+(function() {
 
 
     function Moneda(valor,tipo) {
       Medida.call(this, valor, tipo);
     }
-    Moneda.prototype = Object.create(Medida.prototype);
+    Moneda.prototype = new Medida();
     Moneda.prototype.constructor = Moneda;
   
   
   
     /****************METODOS DOLLAR*************************/
-    Dollar.prototype = Object.create(Moneda.prototype);
-    Dollar.prototype.constructor = Dollar;
-   
-  
     function Dollar(valor) {
-      Moneda.call(this, valor, "$");
-      this.name = "Dollar";
+      Moneda.call(this, valor, "d");
     }
+
+    Dollar.prototype = new Moneda();
+    Dollar.prototype.constructor = Dollar;
+    Medida.measures.d = Dollar;
+
     
     //Dollar to Euro
     Dollar.prototype.toEuro = function () {
-      var converted = (this.getValor() * 0.899);
-      return converted;
+      return (this.val * 0.899);
     }
 
 
     /********************METODOS EURO********************/
-    Euro.prototype = Object.create(Moneda.prototype);
-    Euro.prototype.constructor = Euro;
-   
-    
     function Euro(valor) {
-      Moneda.call(this, valor, "€");
-      this.name = "Euro";
+      Moneda.call(this, valor, "e");
     }
     
+    Euro.prototype = new Moneda();
+    Euro.prototype.constructor = Euro;
+    Medida.measures.e = Euro;
+
+
     //Euro to Dollar
     Euro.prototype.toDollar = function () {
-      var converted = (this.getValor() * 1.1122);
-      return converted;
+      return (this.val * 1.1122);
     }
-    
-   
-    Medida.measures = {
-      "$" : Dollar,
-      "€" : Euro
-    };
-
-
-    exports.Moneda = Moneda;
-    exports.Dollar = Dollar;
-    exports.Euro = Euro;
+  
 
 })(this);

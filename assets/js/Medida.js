@@ -1,38 +1,27 @@
-/* Expresion regular extendida */
-var regexp = XRegExp('(?<numero> [+-]?\\d+(\\.\\d+)?([e][+-]?\\d+)?[ ]*) # valor \n' + 
-							       '(?<tipo> [fck$€|km|mi])          # tipo de entrada   \n' + 
-							       '(?<to> \\s*(?:to)?\\s*)  # to opcional \n' +
-							       '(?<destino> [fck$€|km|mi])       # tipo destino', 'x');
-
 (function (exports) {
     "use strict";
     
+    /* Expresion regular extendida */
+    var regexp = XRegExp('(?<numero> [-+]?[0-9]+(\.[0-9]+)?(?:e[+-]?[0-9]+)?) #valor \n' +
+							           '(?<tipo> [fFcCkKmMpPdDeE])          # tipo de entrada   \n' + 
+							           '(?<to> \\s*(?:to)?\\s*)  # to opcional \n' +
+							           '(?<destino> [fFcCkKmMpPdDeE])       # tipo destino', 'x');
     
     function Medida(valor, tipo) {      
         /* tipo es opcional. Debería admitir  new Medida("45.2 Km") */ 
         /* ademas de new Medida(45.2, "Km") */
-   
-        if (!tipo) {  
-            var match = XRegExp.exec(valor, regexp);  
-            var val = match.numero;
-            var tip = match.tipo;
-        } 
-        else {
-            var val = valor;
-            var tip = tipo;
-        }
-        
-        this.getValor = function() { return val; };
-        this.getTipo = function() { return tip; };
-      
+        this.val = valor; 
+        this.tip = tipo;  
+
     };
 
-
+    Medida.constructor = Medida; 
+    Medida.measures = Medida.measures || {};
+    
     Medida.match = function(entrada)
     {
         return XRegExp.exec(entrada, regexp);
     }
-
 
 
     Medida.convertir = function(valor) {
