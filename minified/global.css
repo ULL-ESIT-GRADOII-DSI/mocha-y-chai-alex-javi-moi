@@ -1,0 +1,28 @@
+*{margin:0;padding:0}
+body{background:linear-gradient(to top,#ff0 -10%,#de5317)}
+.contenedor1{position:static}
+.contenedor2{text-align:center;width:auto;margin-top:94px;color:#000}
+.ayuda,.equivalencias{border-color:#000;border-radius:15px;color:#000;float:left;margin-top:50px;height:auto;width:auto;text-align:center;border-style:solid}
+.ayuda{margin-left:50px}
+.equivalencias{margin-left:20px}
+nav>ul li a:hover,nav>ul>li:hover>ul{border-bottom-left-radius:5px;border-bottom-right-radius:5px}
+nav ul{list-style:none;background-color:#000}
+nav>ul{position:relative;display:table;width:100%}
+nav>ul li{display:table-cell}
+nav>ul>li:hover>ul{display:block}
+nav ul li ul{display:block;position:absolute;background:#000;width:auto}
+nav ul li #paginas li,nav ul li #repos li{width:auto}
+nav>ul>li>ul{display:none}
+nav>ul li a{color:#fff;display:block;line-height:25px;padding:12.5px;position:relative;text-align:center;text-decoration:none}
+#converted,.ayuda hr{color:#000}
+.ayuda h2,.equivalencias h2{padding-top:10px;padding-left:10px}
+nav>ul li a:hover{background:#fff;color:#000}
+.contenedor2 h1{font-size:80px;font-family:Mystery Quest}
+.contenedor2 p{font-size:25px;font-family:verdana}
+.contenedor2 label{font-size:20px}
+#convert{border-style:solid;border-radius:5px;width:300px;height:25px}
+#converted{font-weight:700;font-size:large}
+.ayuda h2{font-size:30px}
+.ayuda p{font-size:20px;padding-left:10px;padding-bottom:10px;padding-right:10px}
+.equivalencias h2{font-size:30px}
+.equivalencias p{font-size:20px;padding-left:30px;padding-right:10px}
