@@ -7,19 +7,19 @@ var minifyHTML = require('gulp-minify-html');
 var minifyCSS  = require('gulp-minify-css');
 
 gulp.task('minify', function () {
-  gulp.src('main.js')
+  gulp.src('./assets/js/main.js')
   .pipe(uglify())
   .pipe(gulp.dest('minified'));
-  gulp.src('Medida.js')
+  gulp.src('./assets/js/Medida.js')
   .pipe(uglify())
   .pipe(gulp.dest('minified'));
-  gulp.src('Temperatura.js')
+  gulp.src('./assets/js/Temperatura.js')
   .pipe(uglify())
   .pipe(gulp.dest('minified'));
-  gulp.src('Distancia.js')
+  gulp.src('./assets/js/Distancia.js')
   .pipe(uglify())
   .pipe(gulp.dest('minified'));
-  gulp.src('Moneda.js')
+  gulp.src('./assets/js/Moneda.js')
   .pipe(uglify())
   .pipe(gulp.dest('minified'));
   
@@ -28,16 +28,16 @@ gulp.task('minify', function () {
     .pipe(minifyHTML())
     .pipe(gulp.dest('./minified/'))
 
-  gulp.src('./custom.css')
+  gulp.src('./assets/css/custom.css')
    .pipe(minifyCSS({keepBreaks:true}))
    .pipe(gulp.dest('./minified/'))
-  gulp.src('./global.css')
+  gulp.src('./assets/css/global.css')
    .pipe(minifyCSS({keepBreaks:true}))
    .pipe(gulp.dest('./minified/'))
-  gulp.src('./normalize.css')
+  gulp.src('./assets/css/normalize.css')
    .pipe(minifyCSS({keepBreaks:true}))
    .pipe(gulp.dest('./minified/'))
-  gulp.src('./skeleton.css')
+  gulp.src('./assets/css/skeleton.css')
    .pipe(minifyCSS({keepBreaks:true}))
    .pipe(gulp.dest('./minified/'))
 });
