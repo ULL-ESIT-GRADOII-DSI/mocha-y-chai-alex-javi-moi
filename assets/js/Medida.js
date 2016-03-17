@@ -13,7 +13,9 @@
         /* ademas de new Medida(45.2, "Km") */
         this.val = valor; 
         this.tip = tipo;  
-
+        /*
+        this.getValor=function(){return val};
+        this.getTipo=function(){return tip};*/
     };
 
     Medida.constructor = Medida; 
