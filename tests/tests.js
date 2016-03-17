@@ -10,6 +10,12 @@ describe("Medida", function()
                 expect(cons.val).to.equal("32");
                 expect(cons.tip).to.equal("c");
             });
+            
+            it("Deberia construir el objeto medida sin tipo", function() {
+                var cons1 = new Medida("32c");
+                expect(cons1.val).to.equal("32");
+                expect(cons1.tip).to.equal("c");
+            })
         });
     
         describe("#match", function() {
@@ -36,7 +42,7 @@ describe("Medida", function()
 /* *****PRUEBAS PARA LA CLASE TEMPERATURA***** */
 describe("Temperatura", function() 
 {
-/*        describe("constructor", function() {
+        describe("constructor", function() {
             it("Deberia construir un objeto temperatura", function() {
                 var cons_t = new Temperatura("32","c");
                 
@@ -44,7 +50,7 @@ describe("Temperatura", function()
                 //expect(cons1.tip).to.equal("k");
             });
         });
-        
+   /*     
         describe("Fahrenheit", function() {
             
             it("Deberia construir un objeto Fahrenheit", function() {

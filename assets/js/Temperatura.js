@@ -20,12 +20,12 @@
     //fahrenheit to celsius
     Fahrenheit.prototype.toCelsius = function () {
       return (this.val - 32) * 5/9;
-    }
+    };
     
     //Fahrenheit to kelvin
     Fahrenheit.prototype.toKelvin = function () {
       return ((this.val - 32) / (9/5)) + 273.15;
-    }
+    };
   
 
     /********************METODOS CELSIUS********************/
@@ -35,17 +35,18 @@
     
     Celsius.prototype = new Temperatura();
     Celsius.prototype.constructor = Celsius;
-    Medida.measures.c= Celsius;
+    Medida.measures.c = Celsius;
         
     //Celsius to fahrenheit
     Celsius.prototype.toFahrenheit = function () {
-      return (this.val * 9/5)+32;
-    }
+      return ((this.val * 9/5)+ 32);
+    };
     
-    //Celsius to Kelvin
+    //Celsius to kelvin
     Celsius.prototype.toKelvin = function () {
       return (this.val + 273.15);
-    }
+    };
+
 
     
     /******************METODOS KELVIN**********************/
@@ -60,11 +61,11 @@
     //Kelvin to celsius
     Kelvin.prototype.toCelsius = function () {
       return (this.val - 273.15);
-    }
+    };
     
     //Kelvin to fahrenheit
     Kelvin.prototype.toFahrenheit = function () {
-      return ((this.val - 273.15) * 9/5) + 32;
-    }
+      return (((this.val - 273.15) * 9/5) + 32);
+    };
 
 })(this);
