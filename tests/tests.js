@@ -158,3 +158,14 @@ describe("Distancia", function() {
 
 /* *****PRUEBAS PARA LA CLASE MONEDA***** */
 
+
+describe("Moneda", function() {
+   
+        describe("constructor",function() {
+           it("Deberia construir un objeto Moneda", function(){
+                var dis = new Moneda("1", "d");
+                expect(dis.val).to.equal("1");
+                expect(dis.val).to.equal("d");
+           });
+        });
+});
