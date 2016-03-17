@@ -29,6 +29,10 @@ describe("Medida", function()
         });
         
         describe("#convertir", function() {
+            it("Deberia convertir correctamente", function() {
+                expect(Medida.convertir("0c to k")).to.equal('273.15 toKelvin');
+            });
+            
             it("Deberia dar error al pasar a una temperatura desconocida", function() {
                 expect(Medida.convertir("32f to j")).to.equal('Introduzca una temperatura valida: 330e-1 F to C');
             });
@@ -94,12 +98,12 @@ describe("Temperatura", function()
                 expect(cons_k1.val).to.equal(32);
             });
             
-            it("Deberia convertir a fahrenheit", function() {
+            it("Deberia convertir a Fahrenheit", function() {
                 var conv_k2 = new Kelvin(32);
                 expect(conv_k2.toFahrenheit()).to.equal(-402.07);
             });
             
-            it("Deberia convertir a kelvin", function() {
+            it("Deberia convertir a Celsius", function() {
                 var conv_k3 = new Kelvin(32);
                 expect(conv_k3.toCelsius()).to.equal(-241.15);
             });
@@ -111,12 +115,13 @@ describe("Temperatura", function()
 
 describe("Distancia", function() {
    
-   describe("constructor",function() {
-       it("Deberia construir un objeto Distancia", function(){
-            var dis = new Distancia("1", "m");
-            expect(dis.val).to.equal("1");
-            expect(dis.val).to.equal("m");
-       });
+        describe("constructor",function() {
+           it("Deberia construir un objeto Distancia", function(){
+                var dis = new Distancia("1", "m");
+                expect(dis.val).to.equal("1");
+                expect(dis.val).to.equal("m");
+           });
+        });  
        /*
         describe("Metros", function() {
             
@@ -125,12 +130,13 @@ describe("Distancia", function() {
                 expect(cons_m1.val).to.equal("1");
             });
             
-            it("Deberia convertir a Pulgadas", function() {
+        it("Deberia convertir a Pulgadas", function() {
                 var conv_m2 = new Pulgadas("1");
                 expect(conv_m2.toPulgadas()).to.equal(39.3701);
             });
             
         });
+        
         describe("Pulgadas", function() {
             
             it("Deberia construir un objeto Pulgadas", function() {
@@ -146,7 +152,7 @@ describe("Distancia", function() {
         });
         
         */
-   });
+  
     
 });
 
