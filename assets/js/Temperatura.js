@@ -1,4 +1,4 @@
-(function() {
+(function(exports) {
     
     function Temperatura(valor,tipo) {
       Medida.call(this, valor, tipo);
@@ -67,5 +67,12 @@
     Kelvin.prototype.toFahrenheit = function () {
       return (((this.val - 273.15) * 9/5) + 32);
     };
+    
+    
+    /* ******exports********* */
+    exports.Temperatura = Temperatura;
+    exports.Fahrenheit = Fahrenheit;
+    exports.Celsius = Celsius;
+    exports.Kelvin = Kelvin;
 
 })(this);

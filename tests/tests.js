@@ -43,18 +43,19 @@ describe("Medida", function()
         });
 });
 
+
 /* *****PRUEBAS PARA LA CLASE TEMPERATURA***** */
 describe("Temperatura", function() 
 {
         describe("constructor", function() {
             it("Deberia construir un objeto temperatura", function() {
-                var cons_t = new Temperatura("32","c");
+                var cons_t = new Temperatura(32,"k");
                 
-                //expect(cons.val).to.equal(32);
-                //expect(cons1.tip).to.equal("k");
+                expect(cons_t.val).to.equal(32);
+                expect(cons_t.tip).to.equal("k");
             });
         });
-   /*     
+        
         describe("Fahrenheit", function() {
             
             it("Deberia construir un objeto Fahrenheit", function() {
@@ -69,7 +70,7 @@ describe("Temperatura", function()
             
             it("Deberia convertir a kelvin", function() {
                 var conv_f3 = new Fahrenheit(32);
-                expect(conv_f3.toKelvin()).to.equal(273,15);
+                expect(conv_f3.toKelvin()).to.equal(273.15);
             });
         });
         
@@ -104,15 +105,15 @@ describe("Temperatura", function()
             });
             
             it("Deberia convertir a Celsius", function() {
-                var conv_k3 = new Kelvin(32);
-                expect(conv_k3.toCelsius()).to.equal(-241.15);
+                var conv_k3 = new Kelvin(0);
+                expect(conv_k3.toCelsius()).to.equal(-273.15);
             });
-        });*/
+        });
 });
 
 
 /* *****PRUEBAS PARA LA CLASE DISTANCIA***** */
-
+/*
 describe("Distancia", function() {
    
         describe("constructor",function() {
@@ -121,7 +122,7 @@ describe("Distancia", function() {
                 expect(dis.val).to.equal("1");
                 expect(dis.val).to.equal("m");
            });
-        });  
+        }); */ 
        /*
         describe("Metros", function() {
             
@@ -151,10 +152,10 @@ describe("Distancia", function() {
             
         });
         
-        */
+        
   
     
-});
+});*/
 
 /* *****PRUEBAS PARA LA CLASE MONEDA***** */
 

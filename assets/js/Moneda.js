@@ -1,4 +1,4 @@
-(function() {
+(function(exports) {
 
 
     function Moneda(valor,tipo) {
@@ -40,5 +40,8 @@
       return (this.val * 1.1122);
     }
   
+    exports.Moneda = Moneda;
+    exports.Dollar = Dollar;
+    exports.Euro = Euro;
 
 })(this);
