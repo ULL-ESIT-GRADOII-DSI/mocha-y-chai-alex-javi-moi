@@ -159,14 +159,25 @@ describe("Distancia", function() {
 
 /* *****PRUEBAS PARA LA CLASE MONEDA***** */
 
-/*
+
 describe("Moneda", function() {
    
         describe("constructor",function() {
            it("Deberia construir un objeto Moneda", function(){
-                var dis = new Moneda("1", "d");
-                expect(dis.val).to.equal("1");
-                expect(dis.val).to.equal("d");
+                var mon = new Moneda(1, "d");
+                expect(mon.val).to.equal(1);
+                expect(mon.tip).to.equal("d");
            });
         });
-});*/
+        
+        describe("Dollar",function(){
+            it("Debería construir un objeto Dollar", function(){
+               var mon1 = new Dollar(1);
+               expect(mon1.val).to.equal(1);
+            });
+            it("Deberia pasar a Euros",function() {
+               var mon2 = new Dollar(1);
+               expect(mon2.toEuro()).to.equal(0.899);
+            });
+        });
+});
