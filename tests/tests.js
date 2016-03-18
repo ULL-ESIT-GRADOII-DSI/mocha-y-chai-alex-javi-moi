@@ -113,27 +113,27 @@ describe("Temperatura", function()
 
 
 /* *****PRUEBAS PARA LA CLASE DISTANCIA***** */
-/*
+
 describe("Distancia", function() {
    
         describe("constructor",function() {
            it("Deberia construir un objeto Distancia", function(){
-                var dis = new Distancia("1", "m");
-                expect(dis.val).to.equal("1");
-                expect(dis.val).to.equal("m");
+                var dis = new Distancia(1, "m");
+                expect(dis.val).to.equal(1);
+                expect(dis.tip).to.equal("m");
            });
-        }); */ 
-       /*
+        }); 
+       
         describe("Metros", function() {
             
             it("Deberia construir un objeto Metros", function() {
-                var cons_m1 = new Metros("1");
-                expect(cons_m1.val).to.equal("1");
+                var dis1 = new Metros(1);
+                expect(dis1.val).to.equal(1);
             });
             
         it("Deberia convertir a Pulgadas", function() {
-                var conv_m2 = new Pulgadas("1");
-                expect(conv_m2.toPulgadas()).to.equal(39.3701);
+                var dis2 = new Metros(1);
+                expect(dis2.toPulgadas()).to.equal(39.3701);
             });
             
         });
@@ -141,13 +141,13 @@ describe("Distancia", function() {
         describe("Pulgadas", function() {
             
             it("Deberia construir un objeto Pulgadas", function() {
-                var cons_p1 = new Pulgadas("1");
-                expect(cons_p1.val).to.equal("1");
+                var dis3 = new Pulgadas(1);
+                expect(dis3.val).to.equal(1);
             });
             
             it("Deberia convertir a Metros", function() {
-                var conv_p2 = new Metros("1");
-                expect(conv_p2.toMetros()).to.equal(0.0254);
+                var dis4 = new Pulgadas(1);
+                expect(dis4.toMetros()).to.equal(0.0254);
             });
             
         });
@@ -155,11 +155,11 @@ describe("Distancia", function() {
         
   
     
-});*/
+});
 
 /* *****PRUEBAS PARA LA CLASE MONEDA***** */
 
-
+/*
 describe("Moneda", function() {
    
         describe("constructor",function() {
@@ -169,4 +169,4 @@ describe("Moneda", function() {
                 expect(dis.val).to.equal("d");
            });
         });
-});
+});*/
