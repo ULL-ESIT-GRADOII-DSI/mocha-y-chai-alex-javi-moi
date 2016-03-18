@@ -180,4 +180,16 @@ describe("Moneda", function() {
                expect(mon2.toEuro()).to.equal(0.899);
             });
         });
+        
+        describe("Euros", function() {
+           it("Deberia construir un objeto Euro",function(){
+             var mon3 = new Euro(1);
+             expect(mon3.val).to.equal(1);
+           });
+           
+           it("Deberia pasar a Dollar",function() {
+              var mon4= new Euro(1);
+              expect(mon4.toDollar()).to.equal(1.1122);
+           });
+        });
 });
