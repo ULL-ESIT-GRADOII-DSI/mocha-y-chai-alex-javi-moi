@@ -24,6 +24,9 @@
       return (this.val * 0.899);
     }
 
+     Dollar.prototype.toLibras = function () {
+      return (this.val * 0.69057);
+    }
 
     /********************METODOS EURO********************/
     function Euro(valor) {
@@ -39,7 +42,9 @@
     Euro.prototype.toDollar = function () {
       return (this.val * 1.1122);
     }
-    
+    Euro.prototype.toLibras = function () {
+      return (this.val * 0.77826);
+    }
     
     
     /********************METODOS LIBRAS********************/
@@ -59,7 +64,7 @@
     
     
     Libras.prototype.toDollar=function(){
-      return(this.val * 1,4481)
+      return(this.val * 1.4481)
     }
   
     exports.Moneda = Moneda;

@@ -179,6 +179,11 @@ describe("Moneda", function() {
                var mon2 = new Dollar(1);
                expect(mon2.toEuro()).to.equal(0.899);
             });
+            
+            it("Deberia pasar a Libras",function() {
+               var mon5 = new Dollar(1);
+               expect(mon5.toLibras()).to.equal(0.69057);
+            });
         });
         
         describe("Euros", function() {
@@ -191,5 +196,27 @@ describe("Moneda", function() {
               var mon4= new Euro(1);
               expect(mon4.toDollar()).to.equal(1.1122);
            });
+           
+           it("Deberia pasar a Libras",function() {
+               var mon6 = new Euro(1);
+               expect(mon6.toLibras()).to.equal(0.77826);
+            });
+        });
+        
+        describe("Libras", function() {
+           it("Deberia construir un objeto Libras",function(){
+             var mon7 = new Libras(1);
+             expect(mon7.val).to.equal(1);
+           });
+           
+           it("Deberia pasar a Dollar",function() {
+              var mon8= new Libras(1);
+              expect(mon8.toDollar()).to.equal(1.4481);
+           });
+           
+           it("Deberia pasar a Euro",function() {
+               var mon9 = new Libras(1);
+               expect(mon9.toEuro()).to.equal(1.2849);
+            });
         });
 });
