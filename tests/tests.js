@@ -72,6 +72,11 @@ describe("Temperatura", function()
                 var conv_f3 = new Fahrenheit(32);
                 expect(conv_f3.toKelvin()).to.equal(273.15);
             });
+            
+            it("Deberia convertir a Rankine", function() {
+                var conv_f4 = new Fahrenheit(0);
+                expect(conv_f4.toRankine()).to.equal(459.67);
+            });
         });
         
         describe("Celsius", function() {
@@ -90,6 +95,11 @@ describe("Temperatura", function()
                 var conv_c3 = new Celsius(32);
                 expect(conv_c3.toKelvin()).to.equal(305.15);
             });
+            
+            it("Deberia convertir a Rankine", function() {
+                var conv_c4 = new Celsius(0);
+                expect(conv_c4.toRankine()).to.equal(491.67);
+            });
         });
         
         describe("Kelvin", function() {
@@ -107,6 +117,34 @@ describe("Temperatura", function()
             it("Deberia convertir a Celsius", function() {
                 var conv_k3 = new Kelvin(0);
                 expect(conv_k3.toCelsius()).to.equal(-273.15);
+            });
+            
+            it("Deberia convertir a Rankine", function() {
+                var conv_k4 = new Kelvin(0);
+                expect(conv_k4.toRankine()).to.equal(0);
+            });
+        });
+        
+        describe("Rankine", function() {
+            
+            it("Deberia construir un objeto Rankine", function() {
+                var cons_r1 = new Rankine(32);
+                expect(cons_r1.val).to.equal(32);
+            });
+            
+            it("Deberia convertir a Fahrenheit", function() {
+                var conv_r2 = new Rankine(32);
+                expect(conv_r2.toFahrenheit()).to.equal(-427.67);
+            });
+            
+            it("Deberia convertir a Celsius", function() {
+                var conv_r3 = new Rankine(32);
+                expect(conv_r3.toCelsius()).to.equal(-255.37222222222223);
+            });
+            
+            it("Deberia convertir a kelvin", function() {
+                var conv_r4 = new Rankine(32);
+                expect(conv_r4.toKelvin()).to.equal(17.77777777777778);
             });
         });
 });
