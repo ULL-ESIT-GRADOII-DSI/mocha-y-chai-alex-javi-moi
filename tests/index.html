@@ -5,14 +5,22 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="mocha.css" />
+    <script src="../xregexp-all.js"></script>
   </head>
   <body>
     <div id="mocha"></div>
-    <script src="mocha.js"></script>
-    <script>mocha.setup('bdd');</script>
-    <script src="tests.js"></script>
-    <script>
-      mocha.run();
-    </script>
+    
+      <script src="mocha.js"></script>
+      <script src="chai.js"></script>
+      
+      <script scr="../assets/main.js"></script>
+      <script src="../assets/js/Medida.js"></script>
+      <script src="../assets/js/Temperatura.js"></script>
+      <script src="../assets/js/Distancia.js"></script>
+      <script src="../assets/js/Moneda.js"></script>
+      
+      <script>mocha.setup('bdd');</script>
+      <script src="tests.js"></script>
+      <script> mocha.run(); </script>
   </body>
 </html>

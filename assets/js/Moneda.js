@@ -1,4 +1,4 @@
-(function() {
+(function(exports) {
 
 
     function Moneda(valor,tipo) {
@@ -24,6 +24,9 @@
       return (this.val * 0.899);
     }
 
+     Dollar.prototype.toLibras = function () {
+      return (this.val * 0.69057);
+    }
 
     /********************METODOS EURO********************/
     function Euro(valor) {
@@ -39,6 +42,34 @@
     Euro.prototype.toDollar = function () {
       return (this.val * 1.1122);
     }
-  
+    Euro.prototype.toLibras = function () {
+      return (this.val * 0.77826);
+    }
+    
+    
+    /********************METODOS LIBRAS********************/
+    function Libras(valor) {
+      Moneda.call(this, valor, "l");
+    }
+    
+    Libras.prototype = new Moneda();
+    Libras.prototype.constructor = Libras;
+    Medida.measures.l = Libras;
 
+
+    //Libras to Euros
+    Libras.prototype.toEuro = function () {
+      return (this.val * 1.2849);
+    }
+    
+    
+    Libras.prototype.toDollar=function(){
+      return(this.val * 1.4481)
+    }
+  
+    exports.Moneda = Moneda;
+    exports.Dollar = Dollar;
+    exports.Euro = Euro;
+    exports.Libras= Libras;
+    
 })(this);

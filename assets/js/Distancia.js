@@ -1,4 +1,4 @@
-(function() {
+(function(exports) {
     
     function Distancia(valor,tipo){
         Medida.call(this,valor,tipo);
@@ -35,5 +35,8 @@
       return (this.val* 0.0254);
     }
     
+    exports.Distancia = Distancia;
+    exports.Metros = Metros;
+    exports.Pulgadas = Pulgadas;
     
 })(this);
