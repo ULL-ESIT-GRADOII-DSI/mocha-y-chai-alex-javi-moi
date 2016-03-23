@@ -4,7 +4,7 @@
   "description": "Conversor javascript de tipos",
   "main": "conversor.js",
   "scripts": {
-    "test": "mocha test",
+    "test": "node static-server",
     "chai": "curl https://raw.githubusercontent.com/chaijs/chai/master/chai.js -o test/chai.js"
   },
   "repository": {
@@ -30,5 +30,8 @@
     "gulp-uglify": "^1.5.3",
     "gulp-util": "^3.0.7",
     "mocha": "^2.4.5"
+  },
+  "dependencies": {
+    "node-static": "^0.7.7"
   }
 }
