@@ -10,12 +10,25 @@ describe("Medida", function()
                 expect(cons.val).to.equal("32");
                 expect(cons.tip).to.equal("c");
             });
+            it("Deberia construir un objeto pero solo el valor", function() {
+                var cons = new Medida("32","c");
+                
+                expect(cons.val).to.equal("32");
+                //expect(cons.tip).to.equal("c");
+            });
             
+            it("Deberia construir un objeto pero solo el tipo", function() {
+                var cons = new Medida("32","c");
+                
+               // expect(cons.val).to.equal("32");
+                expect(cons.tip).to.equal("c");
+            });
             it("Deberia construir el objeto medida sin tipo", function() {
                 var cons1 = new Medida("32c");
                 expect(cons1.val).to.equal("32");
                 expect(cons1.tip).to.equal("c");
-            })
+            });
+           
         });
     
         describe("#match", function() {
@@ -28,6 +41,8 @@ describe("Medida", function()
             });
         });
         
+       
+        
         describe("#convertir", function() {
             it("Deberia convertir correctamente", function() {
                 expect(Medida.convertir("0c to k")).to.equal('273.15 toKelvin');
@@ -39,6 +54,10 @@ describe("Medida", function()
             
             it("Deberia dar error al pedir una conversion erronea", function() {
                 expect(Medida.convertir("32k a k")).to.equal('Introduzca una temperatura valida: 330e-1 F to C');
+            });
+            
+            it ("Deberia dar error al pasar a una temperatura desconocida", function() {
+                expect(Medida.convertir("32w to j")).to.equal('Introduzca una temperatura valida: 330e-1 F to C'); 
             });
         });
 });
