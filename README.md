@@ -1,17 +1,18 @@
-#**Practica 4 de Desarrollo de Sistemas Informáticos**
+#**Practica 5 de Desarrollo de Sistemas Informáticos. Mocha y Chai**
 
-Esta práctica consistirá en modificar la práctica anterior realizada con html, css y javascript, usando POO y haciendo uso de la herencia en javascript, pero con la intención de mejorar la legibilidad del código, eliminar los switch smell y realizar un buen diseño.
+Esta práctica consistirá en realizar las pruebas necesarias para comprobar que la práctica anterior funciona correctamente.
+Se realizarán pruebas para cada una de las clases definidas y cada uno de los métodos dentro de dichas clases.
+Se realizará un análisis de Cubrimiento usando blanketjs.
 
-
-[Descripcion de la practica](https://campusvirtual.ull.es/1516/mod/page/view.php?id=180154)
+[Descripcion de la practica](https://campusvirtual.ull.es/1516/mod/page/view.php?id=182938)
 
 ### Despliegue en github.io
 
-* [Página de la práctica](http://ull-esit-gradoii-dsi.github.io/eliminacion-del-switch-smell-alex-javi-moi/)
+* [Página de la práctica](http://ull-esit-gradoii-dsi.github.io/mocha-y-chai-alex-javi-moi/)
 
 
 ### Repositorios organización
-* [Repositorio](https://github.com/ULL-ESIT-GRADOII-DSI/eliminacion-del-switch-smell-alex-javi-moi)
+* [Repositorio](https://github.com/ULL-ESIT-GRADOII-DSI/mocha-y-chai-alex-javi-moi)
 
 ###Páginas personales
 #####Alexander
@@ -22,4 +23,3 @@ Esta práctica consistirá en modificar la práctica anterior realizada con html
 
 #####Moisés
 * [Página personal](http://alu0100782851.github.io/)
-
