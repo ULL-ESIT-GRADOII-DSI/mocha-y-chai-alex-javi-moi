@@ -280,3 +280,56 @@ describe("Moneda", function() {
             });
         });
 });
+
+/* ***********PRUEBAS Sinon******** */
+describe("Pruebas Sinon", function() {
+  var sandbox;
+
+  beforeEach(function() {
+    // create a sandbox
+    sandbox = sinon.sandbox.create();
+
+    // stub some console methods
+    sandbox.stub(window.console, "log");
+    sandbox.stub(window.console, "error");
+  });
+
+  afterEach(function() {
+    // restore the environment as it was before
+    sandbox.restore();
+  });
+
+
+  describe("#medida", function() {
+    it("No hay logs ni errores", function() {
+      (new Medida());
+      sinon.assert.notCalled(console.log);
+      sinon.assert.notCalled(console.error);
+    });
+  });
+  
+  describe("#temperatura", function() {
+    it("No hay logs ni errores", function() {
+      (new Temperatura());
+      sinon.assert.notCalled(console.log);
+      sinon.assert.notCalled(console.error);
+    });
+  });
+  
+  describe("#distancia", function() {
+    it("No hay logs ni errores", function() {
+      (new Distancia());
+      sinon.assert.notCalled(console.log);
+      sinon.assert.notCalled(console.error);
+    });
+  });
+  
+  describe("#moneda", function() {
+    it("No hay logs ni errores", function() {
+      (new Moneda());
+      sinon.assert.notCalled(console.log);
+      sinon.assert.notCalled(console.error);
+    });
+  });
+  
+});
