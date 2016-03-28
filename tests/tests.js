@@ -59,7 +59,9 @@ describe("Medida", function()
             it ("Deberia dar error al pasar a una temperatura desconocida", function() {
                 expect(Medida.convertir("32w to j")).to.equal('Introduzca una temperatura valida: 330e-1 F to C'); 
             });
-            
+            it ("Deberia dar error al pasar a una temperatura desconocida", function() {
+                expect(Medida.convertir("32c to d")).to.equal('Desconozco como convertir desde "c" hasta "d"'); 
+            });
         });
 });
 
