@@ -10,6 +10,9 @@ Se realizará un análisis de Cubrimiento usando blanketjs.
 
 * [Página de la práctica](http://ull-esit-gradoii-dsi.github.io/mocha-y-chai-alex-javi-moi/)
 
+### Página de test
+
+* [Página de test](http://ull-esit-gradoii-dsi.github.io/mocha-y-chai-alex-javi-moi/tests/)
 
 ### Repositorios organización
 * [Repositorio](https://github.com/ULL-ESIT-GRADOII-DSI/mocha-y-chai-alex-javi-moi)
